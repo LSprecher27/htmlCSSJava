@@ -1,6 +1,6 @@
 // ============================================
 // TEAM PROFILE PAGE
-// Team Members: [Add your names here!]
+// Team Members: [Gavin and Luke]
 // ============================================
 
 // ============================================
@@ -10,7 +10,7 @@
 let member1Name = "Gavin";
 let member1Age = 17;
 let member1Game = "Skyrim";
-let member1Music = "Adult Alternative Rock";
+let member1Music = "Any Rock Music";
 let member1BestFood = "Steak";
 let member1Restaurant = "Griddle's Cafe";
 let member1PitBull = "No";
@@ -26,15 +26,10 @@ let member2Age = 17;
 let member2Game = "Team Fortress 2";
 let member2Music = "The Offspring or any punk/skate rock";
 let member2BestFood = "Thai Chili Lime Wings from Wingstop";
-let member2Restaurant = "Gandalf's";
+let member2Restaurant = "Longhorn Steakhouse";
 let member2PitBull = "No";
-let member2Basketball = "Kobe, I need that Mamba Mentality";
-let member12uture = "In college for software engineering";
-
-
-//Just copy from member 1 and change values: 
-// let's debug the member2Age issue here - we need to define the member2Age variable or the .js won't run //
-
+let member2Basketball = "Kobe, Mamba Forever";
+let member2Future = "In college for software engineering";
 
 // ============================================
 // TEAM CALCULATIONS
@@ -44,7 +39,7 @@ let member12uture = "In college for software engineering";
 let totalMembers = 2;  // Change this to 3 if you have 3 people!
 
 // Calculate total age
-let totalAge = member1Age + member2Age;  // Add member3Age if needed
+let totalAge = member1Age + member2Age;
 
 // Calculate average age
 let averageAge = totalAge / totalMembers;
@@ -75,10 +70,15 @@ document.getElementById('member1Future').textContent = member1Future;
 // ============================================
 // DISPLAY MEMBER 2
 // ============================================
-
-// again copy from member 1, but remember to change the element IDs: 'member2-name' etc.
-
-
+document.getElementById('member2Name').textContent = member2Name;
+document.getElementById('member2Age').textContent = member2Age;
+document.getElementById('member2Game').textContent = member2Game;
+document.getElementById('member2Music').textContent = member2Music;
+document.getElementById('member2BestFood').textContent = member2BestFood;
+document.getElementById('member2Restaurant').textContent = member2Restaurant;
+document.getElementById('member2PitBull').textContent = member2PitBull;
+document.getElementById('member2Basketball').textContent = member2Basketball;
+document.getElementById('member2Future').textContent = member2Future;
 
 // ============================================
 // LOG TO CONSOLE (for testing)

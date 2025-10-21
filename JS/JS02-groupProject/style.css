@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,148 +5,204 @@
 }
 
 body {
-font-family: 'Nova Script', sans-serif;
-}
-
-/*
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: radial-gradient(circle at center, #1f1f1f 0%, #000000 80%); 
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
     padding: 20px;
     min-height: 100vh;
+    color: #f0f0f0;
+    perspective: 1000px;
 }
-*/
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    background-color: white;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 42px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Team Stats Section */
 .team-stats {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
+    background: linear-gradient(145deg, #282828, #101010); 
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 60px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 0 50px rgba(169, 169, 169, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        0 10px 30px rgba(0, 0, 0, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    animation: pulseGlow 3s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from { box-shadow: 0 0 50px rgba(169, 169, 169, 0.4), 0 10px 30px rgba(0, 0, 0, 0.95); }
+    to { box-shadow: 0 0 70px rgba(169, 169, 169, 0.6), 0 10px 30px rgba(0, 0, 0, 0.95); }
 }
 
 .team-stats h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 200;
 }
 
 .team-stats p {
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 20px; 
+    margin: 18px 0;
+    color: #c0c0c0;
+    font-weight: 400;
 }
 
 .team-stats span {
-    font-weight: bold;
-    font-size: 24px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px 15px;
-    border-radius: 20px;
+    font-weight: 900; 
+    font-size: 28px; 
+    color: #000000; 
+    background: linear-gradient(to right, #f0f0f0, #ffffff, #f0f0f0);
+    padding: 10px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    letter-spacing: 2px;
+    box-shadow: 
+        inset 0 3px 8px rgba(0, 0, 0, 0.6), 
+        0 0 15px rgba(255, 255, 255, 0.4);
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-/* Member Cards */
+.team-stats span:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        inset 0 3px 8px rgba(0, 0, 0, 0.8), 
+        0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+.accent-color {
+    color: #e0e0e0;
+}
+
 .member-card {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    border-left: 8px solid #667eea;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #050505, #101010);
+    padding: 40px;
+    border-radius: 25px; 
+    margin-bottom: 40px;
+    border: 2px solid rgba(169, 169, 169, 0.6);
+    box-shadow: 
+        0 5px 30px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.6s ease;
+    transform-style: preserve-3d;
 }
 
 .member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: rotateX(2deg) rotateY(2deg) scale(1.03);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 1),
+        0 0 50px rgba(255, 255, 255, 0.9); 
+    border-color: #ffffff;
 }
 
 .member-card h2 {
-    color: #667eea;
+    color: #ffffff;
     margin-bottom: 20px;
-    font-size: 32px;
-    border-bottom: 3px solid #667eea;
-    padding-bottom: 10px;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid rgba(80, 80, 80, 0.8);
+    padding-bottom: 15px;
 }
 
 .member-card p {
-    margin: 12px 0;
-    font-size: 17px;
-    line-height: 1.6;
+    margin: 15px 0;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #c0c0c0;
 }
 
 .member-card strong {
-    color: #555;
-    min-width: 200px;
+    color: #ffffff;
+    min-width: 170px;
     display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.8px;
 }
 
 .member-card span {
-    color: #333;
-    font-weight: 500;
+    color: #a9a9a9;
+    font-weight: 800;
 }
 
-/* Different colors for each card */
-.member-card:nth-child(2) {
-    border-left-color: #f093fb;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+
+.member-card:nth-child(3) strong,
+.member-card:nth-child(4) strong {
+    font-weight: 300; 
 }
 
-.member-card:nth-child(2) h2 {
-    color: #f093fb;
-    border-bottom-color: #f093fb;
+.member-card:nth-child(3) span,
+.member-card:nth-child(4) span {
+    font-weight: 600; 
 }
 
-.member-card:nth-child(3) {
-    border-left-color: #4facfe;
-    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-}
 
-.member-card:nth-child(3) h2 {
-    color: #4facfe;
-    border-bottom-color: #4facfe;
-}
 
+.member-card:nth-child(2),
+.member-card:nth-child(3),
 .member-card:nth-child(4) {
-    border-left-color: #43e97b;
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: linear-gradient(135deg, #050505, #101010); 
+    border-left-color: transparent;
 }
 
+.member-card:nth-child(2) h2,
+.member-card:nth-child(3) h2,
 .member-card:nth-child(4) h2 {
-    color: #43e97b;
-    border-bottom-color: #43e97b;
+    color: #ffffff; 
+    border-bottom-color: rgba(80, 80, 80, 0.8);
 }
 
-/* Make it responsive */
+
 @media (max-width: 600px) {
     .container {
-        padding: 20px;
+        padding: 10px;
     }
     
     h1 {
-        font-size: 32px;
+        font-size: 36px;
+        letter-spacing: 2px;
     }
     
+    .team-stats {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .team-stats span {
+        font-size: 22px;
+        padding: 6px 15px;
+        display: block; 
+        margin-top: 10px;
+    }
+
+    .member-card {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
     .member-card strong {
         display: block;
         margin-bottom: 5px;
+    }
+    
+    .member-card:hover {
+        transform: translateY(-5px) scale(1.0);
     }
 }
