@@ -22,10 +22,10 @@ Create a file called `profile.html`:
     
     <script>
         // Store profile information in variables
-        let firstName = "Alex";
-        let lastName = "Johnson";
-        let age = 20;
-        let city = "Seattle";
+        let firstName = "Luke";
+        let lastName = "Sprecher";
+        let age = 17;
+        let city = "Valley City";
         let isStudent = true;
         
         // Display the full name
