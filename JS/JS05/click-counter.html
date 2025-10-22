@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #count {
+            font-size: 64px;
+            color: #2196f3;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        button {
+            padding: 15px 40px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.1s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #clickBtn {
+            background-color: #4caf50;
+            color: white;
+        }
+        #resetBtn {
+            background-color: #f44336;
+            color: white;
+        }
+        #deleteBtn {
+            background-color: yellow;
+            color: black;
+        }
+        #plus10btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 15px;
+        }
+        #neg10btn {
+            background-color: orange;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click Counter</h1>
+        <div id="count">0</div>
+        <button id="clickBtn">Click Me!</button>
+        <button id="resetBtn">Reset</button>
+        <button id="neg10btn">-10</button>
+        <button id="deleteBtn">Subtract</button>
+        <button id="plus10btn">+10</button>
+
+        <p id="message">Start clicking!</p>
+    </div>
+    
+    <script>
+        // Initialize counter variable
+        let clicks = 0;
+        
+        // Select all the elements we need
+        let countDisplay = document.getElementById('count');
+        let clickBtn = document.getElementById('clickBtn');
+        let resetBtn = document.getElementById('resetBtn');
+        let deleteBtn = document.getElementById('deleteBtn');
+        let plus10btn = document.getElementById('plus10btn');
+        let neg10btn = document.getElementById('neg10btn');
+        let message = document.getElementById('message');
+        
+        // Add click event listener to the click button
+        clickBtn.addEventListener('click', function() {
+            clicks++;  // Increase the counter
+            countDisplay.textContent = clicks;  // Update the display
+            message.textContent = `You've clicked ${clicks} times!`;
+            if (clicks >= 10) {
+                message.textContent += ' Get a job man...';
+            } 
+            if (clicks >= 50) {
+                message.textContent = ` It's time to actually get off man`;
+            }
+        });
+       
+        // Add click event listener to the reset button
+        resetBtn.addEventListener('click', function() {
+            clicks = 0;  // Reset counter to 0
+            countDisplay.textContent = clicks;  // Update display
+            message.textContent = 'Counter reset! Start clicking!';
+        });
+        deleteBtn.addEventListener('click', function() {
+            if (clicks > 0) {
+                clicks--;  // Decrease the counter
+            }
+            countDisplay.textContent = clicks;  // Update the display
+            message.textContent = `You've clicked ${clicks} times!`;
+        });
+        plus10btn.addEventListener('click', function() {
+            clicks += 10;  // Increase the counter by 10
+            countDisplay.textContent = clicks;  // Update the display
+            message.textContent = `You've clicked ${clicks} times!`;
+            if (clicks >= 10) {
+                message.textContent += ' Get a job man...';
+            } 
+            if (clicks >= 50) {
+                message.textContent = ` It's time to actually get off man`;
+            }
+            if (clicks >= 100) {
+                message.textContent = `Dude seriously? Go outside!`;
+            }
+            if (clicks >= 200) {
+                message.textContent = `Unemployment Final Boss`;
+            }
+        });
+        neg10btn.addEventListener('click', function() {
+            if (clicks >= 10) {
+                clicks -= 10;  // Decrease the counter by 10
+            } else {
+                clicks = 0; // Prevent negative count
+            }
+            countDisplay.textContent = clicks;  // Update the display
+            message.textContent = `You've clicked ${clicks} times!`;
+        });
+    </script>
+</body>
+</html>
