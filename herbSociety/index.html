@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medina County Herb Society - Cultivating Tradition and Education</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the herb theme */
+        :root {
+            --color-primary: #38761D; /* Deep Herb Green */
+            --color-secondary: #A9D18E; /* Light Sage */
+            --color-accent: #EFEFEF; /* Off-White/Parchment */
+        }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .border-primary { border-color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-accent { color: var(--color-accent); }
+        .bg-accent { background-color: var(--color-accent); }
+        
+        /* Apply Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-accent); /* Light background for the page */
+        }
+        /* Style for the fixed header */
+        #header {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Header and Navigation -->
+    <header id="header" class="sticky top-0 z-50 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Title -->
+                <a href="#" class="text-2xl font-bold tracking-tight md:text-3xl text-secondary">
+                    Medina Herb Society
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#mission" class="hover:text-accent transition duration-150 py-5">Our Mission</a>
+                    <a href="#events" class="hover:text-accent transition duration-150 py-5">Events & Calendar</a>
+                    <a href="#gallery" class="hover:text-accent transition duration-150 py-5">Gallery</a>
+                    <a href="#contact" class="hover:text-accent transition duration-150 py-5">Contact & Join</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" type="button" class="md:hidden text-secondary hover:text-accent focus:outline-none focus:text-accent">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-primary text-secondary border-t border-secondary/50">
+            <a href="#mission" class="block px-4 py-2 text-sm hover:bg-secondary/20 transition duration-150">Our Mission</a>
+            <a href="#events" class="block px-4 py-2 text-sm hover:bg-secondary/20 transition duration-150">Events & Calendar</a>
+            <a href="#gallery" class="block px-4 py-2 text-sm hover:bg-secondary/20 transition duration-150">Gallery</a>
+            <a href="#contact" class="block px-4 py-2 text-sm hover:bg-secondary/20 transition duration-150">Contact & Join</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative h-96 sm:h-[500px] overflow-hidden">
+            <!-- Background Image: pic1 (Garden Beds) -->
+            <img 
+                src="uploaded:image_a0a180.jpg-20c926d1-9e62-4f4a-bbdb-2104ded2e3ab" 
+                alt="Raised garden beds filled with various herbs and lush green foliage." 
+                class="absolute inset-0 w-full h-full object-cover brightness-75"
+                onerror="this.onerror=null; this.src='pic1.jpg';"
+            >
+            <div class="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                <div class="text-center p-6 bg-white/80 rounded-xl shadow-2xl backdrop-blur-sm mx-4">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-primary mb-2">
+                        Cultivating the Tradition of Herbs
+                    </h1>
+                    <p class="text-xl text-gray-700 font-medium">
+                        Medina County Herb Society, Ohio
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="py-16 md:py-24 bg-accent">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border-t-8 border-primary">
+                    <h2 class="text-3xl font-bold text-primary mb-6 text-center">
+                        Our Guiding Mission
+                    </h2>
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+                        **Our mission is to preserve the love, interest and tradition of cultivating herbs, harvesting, preserving, drying and the many uses of herbs through education, and sharing our passion of their ancient histories.**
+                    </p>
+                    <div class="mt-8 text-center">
+                        <a href="#contact" class="inline-block px-8 py-3 bg-primary text-white text-lg font-semibold rounded-full hover:bg-primary/90 transition duration-300 transform hover:scale-105 shadow-md">
+                            Become a Member Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events & Calendar Section -->
+        <section id="events" class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-primary mb-10 text-center">
+                    Upcoming Events & Meetings
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Event Card 1 Placeholder -->
+                    <div class="bg-secondary/20 p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition duration-300">
+                        <p class="text-sm font-semibold text-primary mb-2">DATE: November 2025</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Holiday Greens Workshop</h3>
+                        <p class="text-gray-600">Join us for our annual workshop creating beautiful holiday arrangements with winter greens and herbs. Check back soon for exact registration details!</p>
+                    </div>
+                    
+                    <!-- Event Card 2 Placeholder -->
+                    <div class="bg-secondary/20 p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition duration-300">
+                        <p class="text-sm font-semibold text-primary mb-2">DATE: March 2026</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Spring Seed & Start Swap</h3>
+                        <p class="text-gray-600">Prepare for the planting season! Bring your heirloom seeds and herb starts to trade with fellow enthusiasts. Location details coming soon.</p>
+                    </div>
+
+                    <!-- Event Card 3 Placeholder -->
+                    <div class="bg-secondary/20 p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition duration-300">
+                        <p class="text-sm font-semibold text-primary mb-2">DATE: Ongoing</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Community Garden Workdays</h3>
+                        <p class="text-gray-600">We hold regular workdays at our Medina garden plot. Volunteer hours are announced monthly via email to members.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center p-6 bg-primary/10 rounded-xl">
+                    <p class="text-lg text-primary font-medium">
+                        **To see the full, up-to-date calendar and receive meeting notifications, please join the society!**
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 md:py-24 bg-accent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-primary mb-10 text-center">
+                    Community & Cultivation in Action
+                </h2>
+                
+                <!-- Image Grid (Responsive: 2 columns on small, 3 on medium+) -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    
+                    <!-- Image 1: pic4 (Group Photo) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img 
+                            src="uploaded:image_a0a448.jpg-bf94eb8a-9cbf-4260-9efe-272b7096fe4f" 
+                            alt="Group photo of members posing with their herbal holiday arrangements." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic4.jpg';"
+                        >
+                    </div>
+
+                    <!-- Image 2: pic8 (Market Booth) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img 
+                            src="uploaded:image_a0a489.jpg-fde39dac-8ccd-4bd4-8b40-447e304b260c" 
+                            alt="Members smiling at the Medina County Herb Society market booth." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic8.jpg';"
+                        >
+                    </div>
+
+                    <!-- Image 3: pic2 (Crafting Table) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img 
+                            src="uploaded:image_a0a19c.jpg-6c852a50-bb18-4bbe-b1e7-b7512ce4a98e" 
+                            alt="Table with pine boughs and floral supplies for a crafting workshop." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic2.jpg';"
+                        >
+                    </div>
+
+                    <!-- Image 4: pic7 (Garden Wands) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img 
+                            src="uploaded:image_a0a484.jpg-bf412350-2704-44b8-9a57-4b6b48f003d2" 
+                            alt="Close-up of beaded garden wands for sale." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic7.jpg';"
+                        >
+                    </div>
+
+                    <!-- Image 5: pic5 (Autumn Cornucopia) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img 
+                            src="uploaded:image_a0a44e.jpg-fd9e516f-2d85-4d73-a8d7-a09e801c5365" 
+                            alt="Large decorative cornucopia with autumn flowers and plants in a planter." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic5.jpg';"
+                        >
+                    </div>
+                    
+                    <!-- Image 6: pic3 (Indoor Workshop) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img 
+                            src="uploaded:image_a0a1a1.jpg-019c5b8e-8247-4790-9880-98af9489bf52" 
+                            alt="Members working on small dried floral arrangements at an indoor meeting." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic3.jpg';"
+                        >
+                    </div>
+
+                    <!-- Image 7: pic6 (Banner/Signage) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02] col-span-2 md:col-span-1">
+                        <img 
+                            src="uploaded:image_a0a469.jpg-2ea5e247-2f3b-4d79-b371-a06dba0af009" 
+                            alt="Close up of the Medina County Herb Society banner." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic6.jpg';"
+                        >
+                    </div>
+
+                    <!-- Image 8: pic1 (Garden Plot - Repeat) -->
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02] col-span-2 md:col-span-1">
+                        <img 
+                            src="uploaded:image_a0a180.jpg-20c926d1-9e62-4f4a-bbdb-2104ded2e3ab" 
+                            alt="A vibrant outdoor herb garden plot." 
+                            class="w-full h-48 object-cover object-center lg:h-64"
+                            onerror="this.onerror=null; this.src='pic1.jpg';"
+                        >
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact and Join Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-secondary/30 p-8 md:p-12 rounded-2xl shadow-xl">
+                    <h2 class="text-3xl font-bold text-primary mb-6 text-center">
+                        Connect with the Herb Society
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                        <!-- Contact Info -->
+                        <div>
+                            <h3 class="font-semibold text-2xl text-gray-800 mb-4 border-b border-primary/50 pb-2">
+                                Contact Information
+                            </h3>
+                            <div class="space-y-3">
+                                <p class="flex items-center">
+                                    <span class="mr-3 text-primary">&#9993;</span>
+                                    Email: <a href="mailto:medinacountyherbsociety@aol.com" class="ml-2 text-primary hover:underline font-medium">medinacountyherbsociety@aol.com</a>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-3 text-primary">&#128205;</span>
+                                    Location: Medina, Ohio 44256
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-3 text-primary">&#128100;</span>
+                                    President: Michelle Sanfilippo
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Membership -->
+                        <div>
+                            <h3 class="font-semibold text-2xl text-gray-800 mb-4 border-b border-primary/50 pb-2">
+                                Join the Society
+                            </h3>
+                            <p class="mb-4 text-gray-700">
+                                Support our mission, participate in exclusive workshops, and share your passion for herbs! Membership details are available by contacting us.
+                            </p>
+                            <a href="mailto:medinacountyherbsociety@aol.com" class="inline-block px-6 py-3 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary/90 transition duration-300 shadow-md">
+                                Inquire About Membership
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-secondary py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Medina County Herb Society. All Rights Reserved. </p>
+            <p class="text-sm mt-1">Website designed for simple, low-cost maintenance.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const navLinks = menu.querySelectorAll('a');
+
+            // Toggle function
+            button.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked (for better UX on mobile)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
