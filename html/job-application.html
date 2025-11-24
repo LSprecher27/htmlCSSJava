@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        fieldset { margin-bottom: 20px; padding: 10px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="firstName">First Name: *</label>
+            <input type="text" id="firstName" name="firstName" required minlength="2" maxlength="50" />
+            <label for="lastName">Last Name: *</label>
+            <input type="text" id="lastName" name="lastName" required minlength="2" maxlength="50" />
+            <label for="email">Email: *</label>
+            <input type="email" id="email" name="email" required />
+            <label for="phone">Phone: *</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" title="Format: 123-456-7890" required />
+            <label for="dob">Date of Birth: *</label>
+            <input type="date" id="dob" name="dob" required />
+        </fieldset>
+        <fieldset>
+            <legend>Position Details</legend>
+            <label for="position">Position Applying For: *</label>
+            <select id="position" name="position" required>
+                <option value="">Select a position</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+                <option value="analyst">Analyst</option>
+            </select>
+            <label for="startDate">Available Start Date: *</label>
+            <input type="date" id="startDate" name="startDate" required />
+            <label for="salary">Desired Salary Range: *</label>
+            <select id="salary" name="salary" required>
+                <option value="">Select a range</option>
+                <option value="30-40K">$30-40K</option>
+                <option value="40-50K">$40-50K</option>
+                <option value="50-60K">$50-60K</option>
+                <option value="60K+">$60K+</option>
+            </select>
+            <label>Employment Type: *</label>
+            <input type="radio" id="fullTime" name="employmentType" value="full-time" required />
+            <label for="fullTime">Full-time</label>
+            <input type="radio" id="partTime" name="employmentType" value="part-time" required />
+            <label for="partTime">Part-time</label>
+            <input type="radio" id="contract" name="employmentType" value="contract" required />
+            <label for="contract">Contract</label>
+        </fieldset>
+        <fieldset>
+            <legend>Qualifications</legend>
+            <p></p>
+        </fieldset>
+    </form>
+</body>
+</html>
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" min="0" max="50" />
+            </p>
+            <p>
+                <label for="education">Education Level:</label>
+                <select id="education" name="education">
+                    <option value="">Select education level</option>
+                    <option value="highSchool">High School</option>
+                    <option value="associate">Associate</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="master">Master</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </p>
+            <p>
+                <label>Skills:</label>
+                <input type="checkbox" id="skill1" name="skills" value="html" />
+                <label for="skill1">HTML</label>
+                <input type="checkbox" id="skill2" name="skills" value="css" />
+                <label for="skill2">CSS</label>
+                <input type="checkbox" id="skill3" name="skills" value="javascript" />
+                <label for="skill3">JavaScript</label>
+                <input type="checkbox" id="skill4" name="skills" value="react" />
+                <label for="skill4">React</label>
+                <input type="checkbox" id="skill5" name="skills" value="node" />
+                <label for="skill5">Node.js</label>
+            </p>
+        </fieldset>
+        <!-- END: Qualifications -->
+
+        <!-- BEGIN: Additional Information -->
+        <fieldset>
+            <legend>Additional Information</legend>
+            <p>
+                <label for="reason">Why do you want this position? *</label>
+                <textarea id="reason" name="reason" required maxlength="500"></textarea>
+            </p>
+            <p>
+                <label>Available for Relocation? *</label>
+                <input type="radio" id="relocationYes" name="relocation" value="yes" required />
+                <label for="relocationYes">Yes</label>
+                <input type="radio" id="relocationNo" name="relocation" value="no" required />
+                <label for="relocationNo">No</label>
+            </p>
+        </fieldset>
+        <!-- END: Additional Information -->
+
+        <p>
+            <input type="checkbox" id="agreement" name="agreement" required />
+            <label for="agreement">I certify that the information provided is true and accurate *</label>
+        </p>
+        <p>
+            <button type="submit">Submit Application</button>
+        </p>
+    </form>
+
+</body>
+</html>
